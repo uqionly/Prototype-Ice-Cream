@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4B3023" />
+  <title>IceCreamHub — A Little Scoop of Happiness</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="prototype-note"><span>Prototype storefront</span> Pembayaran, akun, stok, dan pengiriman belum terhubung ke sistem produksi.</div>
+  <header class="site-header" id="top">
+    <div class="header-main container">
+      <button class="icon-button mobile-only" id="menuButton" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
+      <a class="brand" href="#top" aria-label="IceCreamHub beranda"><span class="brand-mark">✦</span><span>IceCream<span class="brand-soft">Hub</span></span></a>
+      <nav class="desktop-nav" aria-label="Navigasi utama"><a href="#shop">Shop</a><a href="#flavors">Flavors</a><a href="#bundles">Bundles</a><a href="#promos">Promotions</a><a href="#about">About</a></nav>
+      <div class="header-actions">
+        <div class="location-wrap"><button class="header-link location" id="locationButton" type="button" aria-haspopup="listbox" aria-expanded="false">⌖ <span id="currentLocation">Jakarta</span></button><div class="location-menu" id="locationMenu" role="listbox" aria-label="Pilih lokasi" hidden></div></div>
+        <button class="icon-button" id="searchFocus" aria-label="Fokus ke pencarian">⌕</button>
+        <button class="icon-button" aria-label="Tampilkan produk favorit" aria-pressed="false" id="favoriteNav">♡</button>
+        <button class="cart-button" id="cartOpen" aria-label="Buka keranjang">Cart <b id="cartCount">0</b></button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav"><a href="#shop">Shop</a><a href="#flavors">Flavors</a><a href="#bundles">Bundles</a><a href="#promos">Promotions</a><a href="#about">About</a></div>
+  </header>
+
+  <main>
+    <section class="hero container" id="hero" aria-label="Kampanye utama">
+      <div class="hero-copy"><p class="eyebrow" id="heroEyebrow">SIGNATURE COLLECTION</p><h1 id="heroTitle">Rasa favorit,<br><em>setiap saat.</em></h1><p id="heroText">Temukan pilihan es krim premium dengan tekstur lembut dan rasa yang istimewa.</p><div class="hero-actions"><a class="button button-dark" href="#shop" id="heroCta">Belanja sekarang <span>→</span></a><button class="text-button" id="heroSecondary">Lihat pilihan minggu ini ↗</button></div></div>
+      <div class="hero-art" id="heroArt" aria-hidden="true"><div class="hero-scoop scoop-chocolate"></div><div class="hero-scoop scoop-pistachio"></div><div class="hero-scoop scoop-strawberry"></div><div class="hero-cone"></div><span class="hero-sticker">SMALL<br>BATCH<br>JOY</span></div>
+      <div class="hero-controls"><button id="heroPrev" aria-label="Kampanye sebelumnya">←</button><div id="heroDots" class="hero-dots" role="group" aria-label="Pilih kampanye"></div><button id="heroNext" aria-label="Kampanye berikutnya">→</button></div>
+    </section>
+    <div class="ticker"><div class="ticker-track"><span>FREE DELIVERY ABOVE RP150.000</span><i>✦</i><span>HANDCRAFTED DAILY</span><i>✦</i><span>NEW FLAVOR EVERY MONTH</span><i>✦</i><span>WEEKEND SCOOP DEALS</span><i>✦</i><span>FREE DELIVERY ABOVE RP150.000</span><i>✦</i><span>HANDCRAFTED DAILY</span></div></div>
+
+    <section class="section container" id="flavors"><div class="section-heading"><div><p class="eyebrow">DISCOVER YOUR NEXT FAVORITE</p><h2>Shop by flavor</h2></div><a class="underlink" href="#shop">See all flavors →</a></div><div class="flavor-grid" id="flavorGrid"></div></section>
+
+    <section class="section section-tight container" id="shop"><div class="section-heading shop-heading"><div><p class="eyebrow">CURATED FOR YOU</p><h2 id="catalogHeading">Best sellers</h2></div><div class="shop-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Cari rasa, bahan, atau produk..." aria-label="Cari produk" /></label><select id="sortSelect" aria-label="Urutkan produk"><option value="popular">Paling populer</option><option value="newest">Terbaru</option><option value="low">Harga terendah</option><option value="high">Harga tertinggi</option><option value="name">Nama A–Z</option></select></div></div><div class="filter-row" id="filterRow"></div><div class="catalog-grid" id="catalogGrid"></div><div class="empty-state" id="emptyState" aria-live="polite" hidden><div>⌕</div><h3>Belum menemukan rasa itu</h3><p>Coba kata kunci lain atau hapus filter yang aktif.</p><button class="button button-outline" id="clearFilters">Reset filter</button></div></section>
+
+    <section class="feature-band container" id="bundles"><div><p class="eyebrow">SWEETEN THE WEEKEND</p><h2>Lebih banyak scoop,<br><em>lebih banyak bahagia.</em></h2><p>Paket pilihan untuk movie night, family time, atau sekadar ingin menyimpan sedikit kebahagiaan di freezer.</p><a href="#promos" class="button button-light">Jelajahi bundles <span>→</span></a></div><div class="bundle-stack"><article><span class="bundle-icon">✦</span><div><strong>Movie Night</strong><small>4 cups + 2 toppings</small></div><b>Rp125.000</b></article><article><span class="bundle-icon">✦</span><div><strong>Weekend Family</strong><small>8 scoops + 1 pint</small></div><b>Rp189.000</b></article></div></section>
+
+    <section class="section container" id="promos"><div class="section-heading"><div><p class="eyebrow">BUILT FOR LITTLE MOMENTS</p><h2>This week's picks</h2></div><a class="underlink" href="#shop">Shop all →</a></div><div class="editorial-grid"><article class="editorial-card editorial-peach"><span class="mini-tag">LIMITED</span><h3>Pistachio<br>Garden</h3><p>Silky, nutty, and made for slow afternoons.</p><button data-filter="Premium" class="circle-arrow" aria-label="Lihat rasa pistachio">↗</button></article><article class="editorial-card editorial-cocoa"><span class="mini-tag">NEW</span><h3>Meet<br>Midnight Cocoa</h3><p>Deep cocoa with a roasted finish.</p><button data-filter="Chocolate" class="circle-arrow" aria-label="Lihat rasa cokelat">↗</button></article><article class="editorial-card editorial-cream"><span class="mini-tag">BUNDLE & SAVE</span><h3>Make room<br>for joy.</h3><p>Family-sized favorites, thoughtfully packed.</p><button data-filter="Bundles" class="circle-arrow" aria-label="Lihat pilihan bundle">↗</button></article></div></section>
+
+    <section class="why-section" id="about"><div class="container"><div class="section-heading"><div><p class="eyebrow">WHY ICECREAMHUB</p><h2>Made for the moments in between.</h2></div><p class="heading-note">Good ingredients, careful craft, and a little more joy in every spoonful.</p></div><div class="principles"><article><span>01</span><h3>Small-batch</h3><p>Rasa diracik dalam batch kecil agar setiap tekstur tetap lembut dan seimbang.</p></article><article><span>02</span><h3>Real ingredients</h3><p>Profil rasa dibuat dari bahan yang dapat kamu kenali dan nikmati.</p></article><article><span>03</span><h3>Carefully crafted</h3><p>Dikembangkan untuk jadi favorit harian, dari first scoop sampai last bite.</p></article></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><a class="brand brand-light" href="#top"><span class="brand-mark">✦</span><span>IceCream<span class="brand-soft">Hub</span></span></a><p>A little scoop of happiness.<br>Premium ice cream, made for every moment.</p><small>© 2026 IceCreamHub. Prototype experience.</small></div><div><h4>Shop</h4><a href="#shop">All products</a><a href="#flavors">Flavors</a><a href="#bundles">Bundles</a><a href="#promos">Promotions</a></div><div><h4>Help</h4><a href="#">FAQ</a><a href="#">Shipping & pickup</a><a href="#">Contact</a><a href="#">Store locator</a></div><div><h4>Stay in the loop</h4><p class="footer-copy">Cerita rasa baru, promo, dan scoop of the month.</p><form id="newsletterForm" class="newsletter"><input type="email" placeholder="Email kamu" aria-label="Email untuk newsletter" required><button aria-label="Daftar newsletter">→</button></form><small id="newsletterMessage"></small></div></div></footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Keranjang belanja" aria-hidden="true"><div class="drawer-header"><div><p class="eyebrow">YOUR SCOOP BAG</p><h2>Your cart <span id="cartTitleCount">(0)</span></h2></div><button class="close-button" id="cartClose" aria-label="Tutup keranjang">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-footer"><div class="voucher"><input id="voucherInput" placeholder="Punya kode promo?" /><button id="voucherApply">Apply</button></div><p class="voucher-message" id="voucherMessage"></p><div class="total-line"><span>Subtotal</span><strong id="cartSubtotal">Rp0</strong></div><div class="total-line muted"><span>Delivery</span><span id="cartDelivery">Dihitung saat checkout</span></div><div class="total-line grand"><span>Total</span><strong id="cartTotal">Rp0</strong></div><button class="button button-dark button-full" id="checkoutButton">Lanjut ke checkout <span>→</span></button><p class="prototype-copy">Checkout dan pembayaran masih simulasi prototype.</p></div></aside><div class="overlay" id="overlay"></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body></html>
+
+
